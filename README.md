@@ -69,6 +69,10 @@ script_spotycai/
 
 The downloaded album will be saved in a folder named `album_downloaded` within the project directory. Each album will have its own subfolder named after the album title.
 
+## Still-to-do
+
+- Add release date to folder name when downloading .mp3
+
 ## Contributions
 
 Contributions are welcome. If you find any issues or have any improvements, please open an issue or submit a pull request.
