@@ -1,6 +1,6 @@
-# Spotycai Song Downloader
-
 ![Header Image](banner.png)
+
+# Spotycai Song Downloader
 
 This project is an automated tool to download album songs from the Spotycai website. It uses Selenium to navigate the website, extract the URLs of the songs in MP3 format, and download them to a specific folder.
 
