@@ -40,10 +40,32 @@ This project is an automated tool to download album songs from the Spotycai webs
 - `src/utils.py`: Utility functions, such as filename sanitization and folder creation.
 - `src/__init__.py`: Initialization file for the src module.
 
+## Project Schema
+
+```
+script_spotycai/
+├── main.py
+├── requirements.txt
+├── environment.yml
+├── LICENSE
+├── README.md
+├── src/
+│   ├── __init__.py
+│   ├── driver_setup.py
+│   ├── album_scraper.py
+│   ├── song_downloader.py
+│   ├── utils.py
+└── album_downloaded/
+```
+
 ## Notes
 
 - Make sure you have Google Chrome installed on your system, as the script uses the Chrome WebDriver.
 - The script is configured to run in headless mode (without a graphical interface). If you want to see the browser while the script is running, you can comment out the line `options.add_argument("--headless")` in `src/driver_setup.py`.
+
+## Album Download Location
+
+The downloaded album will be saved in a folder named `album_downloaded` within the project directory. Each album will have its own subfolder named after the album title.
 
 ## Contributions
 
