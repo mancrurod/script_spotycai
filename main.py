@@ -13,9 +13,12 @@ def main():
     # Get album cover URL
     cover_url = get_album_cover(driver, album_url)
     
-    # Create album folder
-    album_name = "Example Album"
-    album_folder = create_album_folder(album_name)
+    # Extract album title from the URL by replacing "+" with spaces
+    album_title = album_url.split('/')[-1].replace('+', ' ')
+
+    # Use extracted album title to create folder
+    album_folder = create_album_folder(album_title)
+
     
     # Download album cover image
     cover_image_path = download_cover_image(cover_url, album_folder)
