@@ -3,6 +3,23 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+def get_album_cover(driver, album_url):
+    """Fetch the album cover image URL from the album page."""
+    print(f"Navigating to album URL: {album_url}")
+    driver.get(album_url)
+    
+    try:
+        # Wait until the album cover image is loaded
+        cover_element = WebDriverWait(driver, 15).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, ".album-image img"))
+        )
+        cover_url = cover_element.get_attribute("src")
+        print(f"Album cover found: {cover_url}")
+        return cover_url
+    except Exception as e:
+        print(f"Error retrieving album cover: {e}")
+        return None
+
 def get_song_elements(driver, album_url):
     """Fetch song elements from the album page."""
     print(f"Navigating to album URL: {album_url}")

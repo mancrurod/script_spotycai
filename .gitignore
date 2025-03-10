@@ -1,0 +1,4 @@
+# ...existing code...
+
+# Ignore Python cache files
+src/__pycache__/
