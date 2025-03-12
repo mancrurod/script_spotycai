@@ -38,5 +38,5 @@ def download_all_songs(album_url):
     driver.quit()
 
 if __name__ == "__main__":
-    album_url = "https://www.torrenet.xyz/spotycai/album/738/Antonio+Álvarez+Cordero+(Bizcocho)/Los+hermanos+del+buen+fin"
+    album_url = "https://www.torrenet.xyz/spotycai/album/744/Jes%C3%BAs+Bienvenido+(Comparsas)/Las+Ratas"
     download_all_songs(album_url)
