@@ -2,7 +2,7 @@
 
 # Spotycai Song Downloader
 
-This project is an automated tool to download album songs from the Spotycai website. It uses Selenium to navigate the website, extract the URLs of the songs in MP3 format, and download them to a specific folder.
+This project is an automated tool to download album songs from the Spotycai website. It uses Selenium to navigate the website, extract the URLs of the songs in MP3 format, and download them to a specific folder. Additionally, it uses `eyed3` to embed album covers into the downloaded MP3 files.
 
 ## Requirements
 
@@ -10,6 +10,7 @@ This project is an automated tool to download album songs from the Spotycai webs
 - Selenium
 - WebDriver Manager for Chrome
 - Requests
+- eyed3
 
 ## Installation
 
@@ -40,6 +41,7 @@ This project is an automated tool to download album songs from the Spotycai webs
 - `src/album_scraper.py`: Functions to extract song elements from the album page.
 - `src/song_downloader.py`: Functions to get the MP3 URL and download the file.
 - `src/utils.py`: Utility functions, such as filename sanitization and folder creation.
+- `src/mp3_tagging.py`: Functions to embed album covers into MP3 files using `eyed3`.
 - `src/__init__.py`: Initialization file for the src module.
 
 ## Project Schema
@@ -57,6 +59,7 @@ script_spotycai/
 │   ├── album_scraper.py
 │   ├── song_downloader.py
 │   ├── utils.py
+│   ├── mp3_tagging.py
 └── album_downloaded/
 ```
 
