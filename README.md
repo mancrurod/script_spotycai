@@ -1,10 +1,22 @@
 ![Header Image](banner.png)
 
-# Spotycai Song Downloader
+# 🎵 Spotycai Song Downloader
 
-This project is an automated tool to download album songs from the Spotycai website. It uses Selenium to navigate the website, extract the URLs of the songs in MP3 format, and download them to a specific folder. Additionally, it uses `eyed3` to embed album covers into the downloaded MP3 files.
+An automated tool to download album songs from the Spotycai website. This project uses Selenium to navigate the website, extract song URLs in MP3 format, and download them to a specific folder. Additionally, it embeds album covers into the downloaded MP3 files using `eyed3`.
 
-## Requirements
+---
+
+## 🚀 Features
+
+- Automates album song downloads from Spotycai.
+- Embeds album covers into MP3 files.
+- Organizes downloaded albums into structured folders.
+
+---
+
+## 🛠️ Requirements
+
+Ensure you have the following installed:
 
 - Python 3.x
 - Selenium
@@ -12,39 +24,40 @@ This project is an automated tool to download album songs from the Spotycai webs
 - Requests
 - eyed3
 
-## Installation
+---
 
-1. Clone this repository to your local machine.
-2. Install the necessary dependencies by running:
+## 📦 Installation
+
+1. Clone this repository:
+    ```bash
+    git clone https://github.com/your-username/script_spotycai.git
+    cd script_spotycai
+    ```
+
+2. Install dependencies:
     ```bash
     pip install -r requirements.txt
     ```
 
-## Usage
+---
 
-1. Modify the `main.py` file and replace the value of `album_url` with the URL of the Spotycai album you want to download.
+## 📖 Usage
+
+1. Update the `album_url` in `main.py` with the URL of the Spotycai album you want to download:
     ```python
     if __name__ == "__main__":
         album_url = "https://www.torrenet.xyz/spotycai/album/738/Antonio+Álvarez+Cordero+(Bizcocho)/Los+hermanos+del+buen+fin"
         download_all_songs(album_url)
     ```
 
-2. Run the `main.py` script:
+2. Run the script:
     ```bash
     python main.py
     ```
 
-## Project Structure
+---
 
-- `main.py`: Main script that starts the download process.
-- `src/driver_setup.py`: Selenium WebDriver setup.
-- `src/album_scraper.py`: Functions to extract song elements from the album page.
-- `src/song_downloader.py`: Functions to get the MP3 URL and download the file.
-- `src/utils.py`: Utility functions, such as filename sanitization and folder creation.
-- `src/mp3_tagging.py`: Functions to embed album covers into MP3 files using `eyed3`.
-- `src/__init__.py`: Initialization file for the src module.
-
-## Project Schema
+## 📂 Project Structure
 
 ```
 script_spotycai/
@@ -63,23 +76,50 @@ script_spotycai/
 └── album_downloaded/
 ```
 
-## Notes
+### Key Files
 
-- Make sure you have Google Chrome installed on your system, as the script uses the Chrome WebDriver.
-- The script is configured to run in headless mode (without a graphical interface). If you want to see the browser while the script is running, you can comment out the line `options.add_argument("--headless")` in `src/driver_setup.py`.
+- **`main.py`**: Entry point for the script.
+- **`src/driver_setup.py`**: Configures Selenium WebDriver.
+- **`src/album_scraper.py`**: Extracts song details from the album page.
+- **`src/song_downloader.py`**: Handles MP3 URL extraction and downloading.
+- **`src/utils.py`**: Utility functions for file handling and folder creation.
+- **`src/mp3_tagging.py`**: Embeds album covers into MP3 files.
 
-## Album Download Location
+---
 
-The downloaded album will be saved in a folder named `album_downloaded` within the project directory. Each album will have its own subfolder named after the album title.
+## 📌 Notes
 
-## Still-to-do
+- **Browser Requirement**: Ensure Google Chrome is installed, as the script uses Chrome WebDriver.
+- **Headless Mode**: The script runs in headless mode by default. To view the browser during execution, comment out the line:
+    ```python
+    options.add_argument("--headless")
+    ```
+    in `src/driver_setup.py`.
 
-- Add release date to folder name when downloading .mp3
+---
 
-## Contributions
+## 📁 Album Download Location
 
-Contributions are welcome. If you find any issues or have any improvements, please open an issue or submit a pull request.
+Downloaded albums are saved in the `album_downloaded` folder within the project directory. Each album is stored in its own subfolder named after the album title.
 
-## License
+---
 
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
+## 📝 To-Do
+
+- Add release date to folder names when downloading MP3 files.
+
+---
+
+## 🤝 Contributions
+
+Contributions are welcome! If you encounter any issues or have suggestions for improvement, feel free to open an issue or submit a pull request.
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+---
+
+🎉 **Happy Downloading!**
