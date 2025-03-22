@@ -8,6 +8,7 @@ Download your favorite albums from Spotycai with ease! This automated tool navig
 
 ## 📂 Project Structure
 
+```
 spotycai-downloader/
 ├── main.py                # Entry point script  
 ├── src/                   # Source code
@@ -23,6 +24,7 @@ spotycai-downloader/
 ├── LICENSE                # MIT License
 ├── README.md              # Project documentation
 └── banner.png             # Project banner image
+```
 
 ---
 
