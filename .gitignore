@@ -2,3 +2,4 @@
 
 # Ignore Python cache files
 src/__pycache__/
+album_downloaded/
