@@ -1,3 +1,5 @@
+📘 Este archivo está disponible en español: [README_es.md](README_es.md)
+
 # 🎵 Spotycai Song Downloader
 
 **Spotycai Song Downloader** is a Python-based automation tool that allows you to download full albums from Spotycai, extract metadata, and embed album artwork into MP3 files — all in one script.
